@@ -47,8 +47,3 @@ y = map(t -> (cos(t))^2, x)
 51.039 ns (0 allocations: 0 bytes)
 89.118 ns (1 allocation: 64 bytes)
 ```
-
-The plot below shows the accuracy of Simpson's and Trapeziodal rules with increasing number of grid
-
-![err](https://github.com/user-attachments/assets/8d81f1cd-da12-42aa-876c-43a849639e2a)
-
