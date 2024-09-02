@@ -13,7 +13,6 @@ y = map(t -> (cos(t))^2, x)
 println(simpson(y, x))
 ```
 
-
 ```plaintext
 = 4.312252089129921
 ```
@@ -25,7 +24,6 @@ using Quadgk
 
 println(quadgk(t -> (cos(t))^2, 0, 9, rtol=1e-6)[1])
 ```
-
 
 ```julia
 = 4.312253188307081
@@ -49,3 +47,11 @@ y = map(t -> (cos(t))^2, x)
 51.039 ns (0 allocations: 0 bytes)
 89.118 ns (1 allocation: 64 bytes)
 ```
+
+The plot below shows the accuracy of Simpson's and Trapeziodal rules with increasing number of grid
+
+```
+![alt text](https://github.com/shashankku414/Simpson.jl/tree/master/benchmark/err.png?raw=true)
+```
+
+Yo you
