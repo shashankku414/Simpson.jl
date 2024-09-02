@@ -24,7 +24,7 @@ function main()
         simp_time[i] = @elapsed Simpson.simpson(y, x)
         trap_time[i] = @elapsed trapz(x, y)
     end
-    # println(trap_error)
+
     plot(grid_size, trap_error, xlabel = "Grid size", ylabel="% error", label="Trapezoidal Method")
     plot!(grid_size, simp_error, xlabel = "Grid size", ylabel="% error", label="Simpson Method")
     savefig("err.png")
