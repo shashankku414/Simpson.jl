@@ -1,5 +1,6 @@
 using Test
 using QuadGK
+using Trapz
 
 include("../src/Simpson.jl")
 
@@ -12,3 +13,6 @@ quad_int = quadgk(t -> (cos(t))^2, 0, 9, rtol=1e-6)[1]
 
 @test round(Simpson.simpson(y, x), digits=4) ≈ int_exact
 @test isapprox(Simpson.simpson(y, x), quad_int, rtol=1e-4)
+
+println(Simpson.simpson(y, x))
+println(quad_int)
