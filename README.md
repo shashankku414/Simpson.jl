@@ -50,8 +50,4 @@ y = map(t -> (cos(t))^2, x)
 
 The plot below shows the accuracy of Simpson's and Trapeziodal rules with increasing number of grid
 
-```
-![Alt text](https://github.com/shashankku414/Simpson.jl/tree/master/benchmark/err.png?raw=true)
-```
-
-Yo you
+`https://github.com/shashankku414/Simpson.jl/tree/master/benchmark/err.png?raw=true)`
