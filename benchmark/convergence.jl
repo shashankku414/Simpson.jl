@@ -3,10 +3,10 @@ using Trapz
 using Plots
 using QuadGK
 
-include("../src/Simpson.jl")
+include("../src/Simpson38.jl")
 
 function main()
-    grid_size = 10:1:101
+    grid_size = 12:1:101
     simp_error = zeros(Float64, length(grid_size))
     trap_error = zeros(Float64, length(grid_size))
     simp_time = zeros(Float64, length(grid_size))
@@ -17,11 +17,11 @@ function main()
         x = collect(range(0, 9, length=grid_size[i]))
         y = map(t -> (cos(t))^2, x)
         # println(integral(y, x))
-        simp_out = Simpson.simpson(y, x)
+        simp_out = Simpson38.simpson38(y, x)
         trap_out = trapz(x, y)
         simp_error[i] = abs(simp_out - int_act)/(int_act) * 100
         trap_error[i] = abs(trap_out - int_act)/(int_act) * 100
-        simp_time[i] = @elapsed Simpson.simpson(y, x)
+        simp_time[i] = @elapsed Simpson38.simpson38(y, x)
         trap_time[i] = @elapsed trapz(x, y)
     end
 
