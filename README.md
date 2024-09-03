@@ -25,7 +25,7 @@ using Quadgk
 println(quadgk(t -> (cos(t))^2, 0, 9, rtol=1e-6)[1])
 ```
 
-```julia
+```plaintext
 = 4.312253188307081
 ```
 
@@ -70,3 +70,4 @@ simpson([simpson(z1[x, :], y1) for x in eachindex(x1)], x1)
 ```plaintext
 = 557.8276989886084
 ```
+
